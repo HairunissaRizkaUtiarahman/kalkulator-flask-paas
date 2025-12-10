@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Flask</title>
+</head>
+<body>
+    <h2>Kalkulator Sederhana</h2>
+
+    <form method="POST">
+        <input type="number" step="any" name="num1" placeholder="Angka pertama" required>
+        <br><br>
+
+        <select name="operator" required>
+            <option value="add">Tambah (+)</option>
+            <option value="subtract">Kurang (-)</option>
+            <option value="multiply">Kali (*)</option>
+            <option value="divide">Bagi (/)</option>
+        </select>
+        <br><br>
+
+        <input type="number" step="any" name="num2" placeholder="Angka kedua" required>
+        <br><br>
+
+        <button type="submit">Hitung</button>
+    </form>
+
+    {% if result is not none %}
+        <h3>Hasil: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
